@@ -4,7 +4,7 @@ const https = require('https')
 
 function readWriteAsync () {
   // Create string of markdown to be inserted
-  const updatedMd = `![alt text](https://raw.githubusercontent.com/djiangdev/Build-a-screenshot-pipeline/main/screenshot.png?raw=true)`
+  const updatedMd = `[Live Demo:](https://nifty-booth-0bf80f.netlify.app) \n ![alt text](https://raw.githubusercontent.com/djiangdev/Build-a-screenshot-pipeline/main/screenshot.png?raw=true)`
 
   // Update README using FS
   fs.readFile('README.md', 'utf-8', (err, data) => {
