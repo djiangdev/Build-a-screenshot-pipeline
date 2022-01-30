@@ -3,8 +3,6 @@ const customConfig = { threshold: 0 }
 const toMatchImageSnapshot = configureToMatchImageSnapshot({
   customDiffConfig: customConfig,
   failureThreshold: 55,
-  failureThresholdType: 'percent',
-  updatePassedSnapshot: true,
-  allowSizeMismatch: true
+  failureThresholdType: 'percent'
 })
 expect.extend({ toMatchImageSnapshot })
