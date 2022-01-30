@@ -12,8 +12,7 @@ describe('jest-image-snapshot', () => {
     await page.goto('https://nifty-booth-0bf80f.netlify.app/')
     const image = await page.screenshot()
     expect(image).toMatchImageSnapshot({
-      comparisonMethod: 'ssim',
-      noColors: true
+      allowSizeMismatch: true
     })
   })
 
