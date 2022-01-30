@@ -12,7 +12,8 @@ describe('jest-image-snapshot', () => {
     await page.goto('https://nifty-booth-0bf80f.netlify.app/')
     const image = await page.screenshot({ path: 'screenshot.png' })
     expect(image).toMatchImageSnapshot({
-      updatePassedSnapshot: true
+      updatePassedSnapshot: true,
+      noColors: true
     })
   })
 
