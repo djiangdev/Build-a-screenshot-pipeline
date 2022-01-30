@@ -10,6 +10,7 @@ on:
 jobs:
   build:
 
+    # Create a ubuntu virtual machine
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,6 +20,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    # Install node
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -28,3 +31,9 @@ jobs:
     - run: npm test
       env:
         CI: true
+
+    # Run script "updateReadme.js" 
+    - name: Update README
+      run: |-
+        node updateReadme.js
+        cat README.md
