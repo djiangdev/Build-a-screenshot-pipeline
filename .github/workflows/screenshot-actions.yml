@@ -35,7 +35,7 @@ jobs:
     # Run script "updateReadme.js" 
     - name: Update README.md
       run: |-
-        node updateReadme.js
+        node update-readme.js
         cat README.md
 
     # Commit changes
