@@ -11,10 +11,13 @@ describe('jest-image-snapshot', () => {
     const page = await browser.newPage()
     await page.goto('https://nifty-booth-0bf80f.netlify.app/')
     const image = await page.screenshot({ path: 'screenshot.png' })
-    expect(image).toMatchImageSnapshot()
+    expect(image).toMatchImageSnapshot({
+      failureThreshold: 0.01,
+      failureThresholdType: 'percent'
+    })
   })
 
   afterAll(async () => {
-    await browser.close();
-  });
+    await browser.close()
+  })
 })
