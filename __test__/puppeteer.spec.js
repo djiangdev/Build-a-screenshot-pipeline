@@ -9,11 +9,9 @@ describe('jest-image-snapshot', () => {
 
   it('works', async () => {
     const page = await browser.newPage()
-    await page.goto('https://nifty-booth-0bf80f.netlify.app/')
-    const image = await page.screenshot()
-    expect(image).toMatchImageSnapshot({
-      allowSizeMismatch: true
-    })
+    await page.goto('https://nifty-booth-0bf80f.netlify.app')
+    const image = await page.screenshot({ path: 'screenshot.png' })
+    expect(image).toMatchImageSnapshot()
   })
 
   afterAll(async () => {
