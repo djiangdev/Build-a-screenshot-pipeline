@@ -44,5 +44,5 @@ jobs:
         git config --global user.email "dinhgiang2611@gmail.com"
         git config --global user.name "djiangdev"
         git add -A
-        git commit -m "Updated screenshot"
+        git commit -m "Updated screenshot" || exit 0
         git push
