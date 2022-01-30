@@ -4,3 +4,4 @@ client
 npm-debug.log
 .env
 .DS_Store
+.github
